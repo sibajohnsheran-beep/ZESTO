@@ -1,0 +1,587 @@
+
+/* ==========================================
+   ZESTO - FRESH INGREDIENTS
+   PREMIUM CINEMATIC 3D SECTION
+========================================== */
+
+.fresh-ingredients {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  overflow: hidden;
+  scroll-margin-top: 90px;
+
+  background:
+    radial-gradient(
+      ellipse 48% 65% at 76% 48%,
+      rgba(174, 38, 16, 0.20),
+      transparent 77%
+    ),
+    linear-gradient(
+      115deg,
+      #120504 0%,
+      #1d0906 52%,
+      #140504 100%
+    );
+
+  border-top: 1px solid rgba(255, 91, 52, 0.11);
+  border-bottom: 1px solid rgba(255, 91, 52, 0.08);
+}
+
+.fresh-ingredients *,
+.fresh-ingredients *::before,
+.fresh-ingredients *::after {
+  box-sizing: border-box;
+}
+
+/* ==========================================
+   MAIN SECTION LAYOUT
+========================================== */
+
+.fresh-ingredients-inner {
+  display: grid;
+  grid-template-columns: 45% 55%;
+  align-items: center;
+  gap: 0;
+
+  width: min(1550px, 100%);
+  min-height: 730px;
+  margin: 0 auto;
+  padding: 80px 6%;
+}
+
+/* ==========================================
+   LEFT SIDE CONTENT
+========================================== */
+
+.fresh-ingredients-content {
+  position: relative;
+  z-index: 5;
+  min-width: 0;
+  padding-right: 24px;
+}
+
+.fresh-ingredients-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  margin-bottom: 27px;
+
+  color: #ffe1bd;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 3.5px;
+  white-space: nowrap;
+}
+
+.fresh-ingredients-eyebrow span {
+  display: block;
+  flex-shrink: 0;
+  width: 27px;
+  height: 2px;
+  background: #ef3129;
+}
+
+/* ==========================================
+   HEADLINE
+========================================== */
+
+.fresh-ingredients-heading {
+  max-width: 620px;
+  margin: 0;
+
+  color: #fff0db;
+  font-family: "Oswald", sans-serif;
+  font-size: clamp(49px, 4.8vw, 79px);
+  font-weight: 700;
+  letter-spacing: -1.5px;
+  line-height: 1.12;
+}
+
+.fresh-ingredients-heading em {
+  display: block;
+  margin-top: 6px;
+
+  color: #f32e29;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 0.92em;
+  font-weight: 900;
+  font-style: italic;
+  line-height: 1.15;
+}
+
+/* ==========================================
+   DESCRIPTION
+========================================== */
+
+.fresh-ingredients-description {
+  max-width: 540px;
+  margin: 26px 0 0;
+
+  color: #dfc3b5;
+  font-size: clamp(15px, 1.08vw, 18px);
+  line-height: 1.85;
+}
+
+/* ==========================================
+   FEATURE ROWS
+========================================== */
+
+.fresh-ingredients-features {
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+  margin-top: 38px;
+}
+
+.fresh-ingredients-feature {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+}
+
+.fresh-ingredients-feature-icon {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+
+  width: 53px;
+  height: 53px;
+
+  color: #ff4b35;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(216, 49, 28, 0.17),
+      rgba(109, 22, 11, 0.12)
+    );
+
+  border: 1px solid rgba(250, 83, 43, 0.24);
+  border-radius: 16px;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+.fresh-ingredients-feature:hover
+.fresh-ingredients-feature-icon {
+  transform: translateY(-3px);
+  background: rgba(230, 56, 30, 0.23);
+}
+
+.fresh-ingredients-feature h3 {
+  margin: 0 0 5px;
+
+  color: #fff1df;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.fresh-ingredients-feature p {
+  margin: 0;
+
+  color: #b99e91;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+/* ==========================================
+   EXPLORE MENU BUTTON
+========================================== */
+
+.fresh-ingredients-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+
+  min-height: 57px;
+  margin-top: 39px;
+  padding: 0 30px;
+
+  color: #fff;
+
+  background:
+    linear-gradient(
+      110deg,
+      #bb100d,
+      #f22e26
+    );
+
+  border: 1px solid #ff4434;
+  border-radius: 999px;
+
+  font-size: 13px;
+  font-weight: 800;
+  text-decoration: none;
+
+  box-shadow:
+    0 15px 35px rgba(130, 17, 8, 0.18);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.fresh-ingredients-button:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 15px 40px rgba(237, 45, 25, 0.28);
+}
+
+.fresh-ingredients-button:focus-visible {
+  outline: 2px solid #ffd38f;
+  outline-offset: 4px;
+}
+
+/* ==========================================
+   RIGHT SIDE 3D VISUAL
+========================================== */
+
+.fresh-ingredients-visual {
+  position: relative;
+  min-width: 0;
+  width: 100%;
+  height: 640px;
+  overflow: hidden;
+}
+
+.fresh-ingredients-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 80%;
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(222, 61, 18, 0.25) 0%,
+      rgba(157, 29, 12, 0.14) 38%,
+      transparent 73%
+    );
+
+  filter: blur(29px);
+  pointer-events: none;
+}
+
+.fresh-ingredients-canvas {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+
+  width: 100%;
+  height: 100%;
+}
+
+.fresh-ingredients-canvas canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  cursor: default;
+  touch-action: pan-y;
+}
+
+/* ==========================================
+   FLOATING INGREDIENT LABELS
+========================================== */
+
+.fresh-ingredients-chip {
+  position: absolute;
+  z-index: 3;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 32px;
+  padding: 8px 13px;
+
+  color: #ffe1bd;
+  background: rgba(32, 9, 6, 0.78);
+
+  border: 1px solid rgba(247, 95, 45, 0.28);
+  border-radius: 999px;
+
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.6px;
+  white-space: nowrap;
+
+  backdrop-filter: blur(12px);
+  pointer-events: none;
+}
+
+.fresh-chip-top {
+  top: 15%;
+  left: 9%;
+}
+
+.fresh-chip-right {
+  top: 25%;
+  right: 2%;
+}
+
+.fresh-chip-bottom {
+  bottom: 15%;
+  left: 13%;
+}
+
+/* ==========================================
+   QUALITY BADGE
+========================================== */
+
+.fresh-ingredients-quality {
+  position: absolute;
+  right: 3%;
+  bottom: 9%;
+  z-index: 4;
+
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  padding: 16px 20px;
+
+  background: rgba(31, 9, 6, 0.87);
+  border: 1px solid rgba(254, 131, 64, 0.25);
+  border-radius: 15px;
+
+  backdrop-filter: blur(16px);
+
+  box-shadow:
+    0 16px 36px rgba(0, 0, 0, 0.24);
+
+  pointer-events: none;
+}
+
+.fresh-quality-symbol {
+  color: #ffc05d;
+  font-size: 26px;
+}
+
+.fresh-ingredients-quality div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.fresh-ingredients-quality strong {
+  color: #fff2e4;
+  font-size: 12px;
+}
+
+.fresh-ingredients-quality small {
+  color: #c2a598;
+  font-size: 10px;
+}
+
+/* ==========================================
+   RESPONSIVE - LAPTOP
+========================================== */
+
+@media (max-width: 1200px) {
+  .fresh-ingredients-inner {
+    grid-template-columns: 46% 54%;
+    padding-inline: 4%;
+  }
+
+  .fresh-ingredients-heading {
+    font-size: clamp(46px, 5vw, 65px);
+  }
+
+  .fresh-ingredients-content {
+    padding-right: 12px;
+  }
+
+  .fresh-ingredients-visual {
+    height: 580px;
+  }
+}
+
+/* ==========================================
+   RESPONSIVE - TABLET
+========================================== */
+
+@media (max-width: 900px) {
+  .fresh-ingredients-inner {
+    grid-template-columns: 48% 52%;
+    min-height: 620px;
+    padding: 60px 4%;
+  }
+
+  .fresh-ingredients-heading {
+    font-size: clamp(40px, 5vw, 54px);
+  }
+
+  .fresh-ingredients-description {
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  .fresh-ingredients-visual {
+    height: 520px;
+  }
+
+  .fresh-ingredients-feature {
+    gap: 12px;
+  }
+
+  .fresh-ingredients-feature-icon {
+    width: 45px;
+    height: 45px;
+  }
+
+  .fresh-ingredients-feature h3 {
+    font-size: 13px;
+  }
+
+  .fresh-ingredients-feature p {
+    font-size: 11px;
+  }
+
+  .fresh-ingredients-chip {
+    font-size: 8px;
+    padding-inline: 9px;
+  }
+}
+
+/* ==========================================
+   RESPONSIVE - MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+  .fresh-ingredients-inner {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding: 65px 5% 55px;
+  }
+
+  .fresh-ingredients-content {
+    padding-right: 0;
+  }
+
+  .fresh-ingredients-eyebrow {
+    font-size: 10px;
+    letter-spacing: 2.5px;
+  }
+
+  .fresh-ingredients-heading {
+    max-width: 600px;
+    font-size: clamp(43px, 8vw, 65px);
+  }
+
+  .fresh-ingredients-description {
+    max-width: 640px;
+    font-size: 15px;
+  }
+
+  .fresh-ingredients-features {
+    gap: 20px;
+    margin-top: 30px;
+  }
+
+  .fresh-ingredients-button {
+    margin-top: 32px;
+  }
+
+  .fresh-ingredients-visual {
+    height: 485px;
+    margin-top: 15px;
+  }
+
+  .fresh-chip-top {
+    top: 10%;
+    left: 6%;
+  }
+
+  .fresh-chip-right {
+    top: 20%;
+    right: 3%;
+  }
+
+  .fresh-chip-bottom {
+    bottom: 16%;
+    left: 6%;
+  }
+
+  .fresh-ingredients-quality {
+    right: 2%;
+    bottom: 8%;
+  }
+}
+
+/* ==========================================
+   RESPONSIVE - SMALL MOBILE
+========================================== */
+
+@media (max-width: 480px) {
+  .fresh-ingredients-inner {
+    padding: 55px 5% 40px;
+  }
+
+  .fresh-ingredients-eyebrow {
+    gap: 9px;
+    letter-spacing: 1.8px;
+  }
+
+  .fresh-ingredients-eyebrow span {
+    width: 20px;
+  }
+
+  .fresh-ingredients-heading {
+    font-size: clamp(38px, 10vw, 50px);
+  }
+
+  .fresh-ingredients-description {
+    font-size: 14px;
+  }
+
+  .fresh-ingredients-visual {
+    height: 360px;
+    margin-top: 20px;
+  }
+
+  .fresh-ingredients-chip {
+    min-height: 27px;
+    padding: 7px 9px;
+    font-size: 7px;
+    letter-spacing: 0.8px;
+  }
+
+  .fresh-ingredients-quality {
+    padding: 11px 13px;
+  }
+
+  .fresh-ingredients-quality strong {
+    font-size: 10px;
+  }
+
+  .fresh-ingredients-quality small {
+    font-size: 9px;
+  }
+
+  .fresh-ingredients-button {
+    width: 100%;
+  }
+}
+
+/* ==========================================
+   ACCESSIBILITY
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .fresh-ingredients-feature-icon,
+  .fresh-ingredients-button {
+    transition: none;
+  }
+}

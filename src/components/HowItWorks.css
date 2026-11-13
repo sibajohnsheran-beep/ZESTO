@@ -1,0 +1,490 @@
+
+/* ==========================================
+   ZESTO - HOW IT WORKS
+   Premium Cinematic Process Section
+========================================== */
+
+.zesto-how {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      ellipse 55% 60% at 50% 52%,
+      rgba(120, 24, 13, 0.17),
+      transparent 78%
+    ),
+    linear-gradient(
+      180deg,
+      #110504 0%,
+      #1c0806 55%,
+      #100403 100%
+    );
+  border-top: 1px solid rgba(255, 100, 55, 0.12);
+}
+
+.zesto-how-container {
+  position: relative;
+  width: min(1500px, 100%);
+  margin: 0 auto;
+  padding: 110px 6% 100px;
+}
+
+.zesto-how-bg-glow {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  z-index: -1;
+  width: 520px;
+  height: 520px;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: rgba(183, 36, 17, 0.09);
+  filter: blur(110px);
+  pointer-events: none;
+}
+
+/* ==========================================
+   SECTION HEADING
+========================================== */
+
+.zesto-how-heading {
+  max-width: 760px;
+  margin: 0 auto 74px;
+  text-align: center;
+}
+
+.zesto-how-eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 22px;
+  color: #f2c9a6;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 3.5px;
+}
+
+.zesto-how-eyebrow span {
+  width: 30px;
+  height: 2px;
+  background: #f3322b;
+}
+
+.zesto-how-heading h2 {
+  margin: 0;
+  color: #fff0db;
+  font-family: "Oswald", sans-serif;
+  font-size: clamp(55px, 6vw, 91px);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+}
+
+.zesto-how-heading h2 em {
+  color: #f1322a;
+  font-family: "Playfair Display", Georgia, serif;
+  font-style: italic;
+  font-weight: 900;
+}
+
+.zesto-how-heading > p {
+  max-width: 590px;
+  margin: 24px auto 0;
+  color: #d6b9aa;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* ==========================================
+   FOUR STEP GRID
+========================================== */
+
+.zesto-how-steps {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 25px;
+}
+
+.zesto-how-step {
+  position: relative;
+  min-width: 0;
+  padding: 26px 18px 32px;
+  text-align: center;
+  border: 1px solid rgba(255, 110, 63, 0.13);
+  border-radius: 22px;
+  background:
+    linear-gradient(
+      155deg,
+      rgba(63, 20, 13, 0.35),
+      rgba(20, 6, 5, 0.25)
+    );
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    background 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.zesto-how-step:hover {
+  transform: translateY(-9px);
+  border-color: rgba(255, 100, 55, 0.45);
+  background:
+    linear-gradient(
+      155deg,
+      rgba(94, 27, 17, 0.47),
+      rgba(25, 7, 5, 0.35)
+    );
+  box-shadow:
+    0 24px 55px rgba(0, 0, 0, 0.18);
+}
+
+/* ==========================================
+   ANIMATED ICONS
+========================================== */
+
+.zesto-how-icon-area {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 190px;
+}
+
+.zesto-how-icon-halo {
+  position: absolute;
+  width: 165px;
+  height: 165px;
+  border-radius: 50%;
+  background:
+    radial-gradient(
+      circle,
+      rgba(237, 63, 30, 0.19),
+      rgba(114, 26, 15, 0.06) 55%,
+      transparent 75%
+    );
+  filter: blur(15px);
+  pointer-events: none;
+}
+
+.zesto-how-icon-ring {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 112px;
+  height: 112px;
+  color: #ffad6d;
+  background:
+    radial-gradient(
+      circle at 35% 25%,
+      #6a2117,
+      #2b0d09 72%
+    );
+  border: 1px solid rgba(255, 131, 72, 0.55);
+  border-radius: 30px;
+  box-shadow:
+    inset 0 0 25px rgba(255, 101, 41, 0.09),
+    0 18px 30px rgba(0, 0, 0, 0.32),
+    0 0 42px rgba(229, 62, 27, 0.13);
+  transform: perspective(500px) rotateX(9deg) rotateY(-10deg);
+  animation: zesto-how-float 4s ease-in-out infinite;
+}
+
+.zesto-how-step:nth-child(2) .zesto-how-icon-ring {
+  animation-delay: -1s;
+}
+
+.zesto-how-step:nth-child(3) .zesto-how-icon-ring {
+  animation-delay: -2s;
+}
+
+.zesto-how-step:nth-child(4) .zesto-how-icon-ring {
+  animation-delay: -3s;
+}
+
+.zesto-how-step:hover .zesto-how-icon-ring {
+  color: #ffd19b;
+  border-color: #ff8c54;
+  box-shadow:
+    0 20px 42px rgba(0, 0, 0, 0.3),
+    0 0 55px rgba(241, 60, 28, 0.24);
+}
+
+@keyframes zesto-how-float {
+  0%, 100% {
+    transform:
+      perspective(500px)
+      rotateX(9deg)
+      rotateY(-10deg)
+      translateY(0);
+  }
+
+  50% {
+    transform:
+      perspective(500px)
+      rotateX(4deg)
+      rotateY(8deg)
+      translateY(-9px);
+  }
+}
+
+.zesto-how-step-number {
+  position: absolute;
+  right: 5%;
+  bottom: 13px;
+  color: rgba(251, 115, 74, 0.25);
+  font-family: "Oswald", sans-serif;
+  font-size: 47px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* ==========================================
+   STEP TEXT
+========================================== */
+
+.zesto-how-step-copy {
+  position: relative;
+  z-index: 2;
+}
+
+.zesto-how-detail {
+  display: inline-block;
+  margin-bottom: 14px;
+  color: #f36950;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2.8px;
+}
+
+.zesto-how-step h3 {
+  margin: 0 0 16px;
+  color: #fff0dd;
+  font-family: "Oswald", sans-serif;
+  font-size: clamp(23px, 2.1vw, 31px);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.zesto-how-step-copy p {
+  max-width: 290px;
+  min-height: 88px;
+  margin: 0 auto;
+  color: #c6a79a;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* ==========================================
+   CONNECTOR ARROW
+========================================== */
+
+.zesto-how-connector {
+  position: absolute;
+  top: 105px;
+  right: -25px;
+  z-index: 5;
+  display: grid;
+  place-items: center;
+  width: 49px;
+  height: 35px;
+  color: #ffa06d;
+  background: #250b08;
+  border: 1px solid rgba(255, 108, 60, 0.3);
+  border-radius: 999px;
+  pointer-events: none;
+}
+
+/* ==========================================
+   BOTTOM CTA
+========================================== */
+
+.zesto-how-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-top: 58px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(255, 117, 72, 0.14);
+}
+
+.zesto-how-note {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  color: #d2ad9b;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.zesto-how-check {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  color: #ffbc79;
+  background: rgba(210, 55, 30, 0.13);
+  border: 1px solid rgba(255, 106, 57, 0.25);
+  border-radius: 50%;
+}
+
+.zesto-how-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  min-height: 55px;
+  padding: 0 28px;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 800;
+  background:
+    linear-gradient(110deg, #b70e0b, #ed2f25);
+  border: 1px solid #ff4639;
+  border-radius: 999px;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.zesto-how-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(235, 46, 29, 0.25);
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 1000px) {
+  .zesto-how-steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .zesto-how-connector {
+    display: none;
+  }
+
+  .zesto-how-container {
+    padding-inline: 5%;
+  }
+
+  .zesto-how-step-copy p {
+    min-height: 65px;
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+  .zesto-how-container {
+    padding: 75px 5% 70px;
+  }
+
+  .zesto-how-heading {
+    margin-bottom: 42px;
+  }
+
+  .zesto-how-heading h2 {
+    font-size: clamp(45px, 10vw, 64px);
+  }
+
+  .zesto-how-heading > p {
+    font-size: 14px;
+  }
+
+  .zesto-how-eyebrow {
+    gap: 9px;
+    font-size: 9px;
+    letter-spacing: 1.6px;
+  }
+
+  .zesto-how-eyebrow span {
+    width: 20px;
+  }
+
+  .zesto-how-steps {
+    grid-template-columns: 1fr;
+    gap: 17px;
+  }
+
+  .zesto-how-step {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    padding: 18px;
+    text-align: left;
+  }
+
+  .zesto-how-icon-area {
+    width: 90px;
+    min-width: 90px;
+    height: 105px;
+  }
+
+  .zesto-how-icon-halo {
+    width: 95px;
+    height: 95px;
+  }
+
+  .zesto-how-icon-ring {
+    width: 73px;
+    height: 73px;
+    border-radius: 20px;
+  }
+
+  .zesto-how-icon-ring svg {
+    width: 29px;
+    height: 29px;
+  }
+
+  .zesto-how-step-number {
+    right: -3px;
+    bottom: 0;
+    font-size: 27px;
+  }
+
+  .zesto-how-detail {
+    margin-bottom: 7px;
+    font-size: 9px;
+  }
+
+  .zesto-how-step h3 {
+    margin-bottom: 8px;
+    font-size: 24px;
+  }
+
+  .zesto-how-step-copy p {
+    min-height: 0;
+    font-size: 12px;
+    line-height: 1.65;
+  }
+
+  .zesto-how-bottom {
+    margin-top: 37px;
+  }
+
+  .zesto-how-button {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .zesto-how-icon-ring {
+    animation: none;
+  }
+
+  .zesto-how-step,
+  .zesto-how-button {
+    transition: none;
+  }
+}

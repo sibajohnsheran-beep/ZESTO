@@ -1,0 +1,1080 @@
+
+/* ==========================================
+   ZESTO - PREMIUM PIZZA MENU
+   Cinematic Pizza Photography
+========================================== */
+
+.zesto-menu {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  scroll-margin-top: 30px;
+  background:
+    radial-gradient(
+      ellipse 55% 50% at 85% 35%,
+      rgba(132, 31, 17, 0.19),
+      transparent 80%
+    ),
+    linear-gradient(
+      180deg,
+      #130504,
+      #1c0806 55%,
+      #110403
+    );
+  border-top: 1px solid rgba(255, 95, 58, 0.14);
+}
+
+.zesto-menu-container {
+  width: min(1550px, 100%);
+  margin: 0 auto;
+  padding: 100px 6% 90px;
+}
+
+/* ==========================================
+   HEADING
+========================================== */
+
+.zesto-menu-intro {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  align-items: end;
+  gap: 25px;
+  margin-bottom: 43px;
+}
+
+.zesto-menu-kicker {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 22px;
+  color: #f2c9a4;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 4px;
+}
+
+.zesto-menu-kicker span {
+  width: 31px;
+  height: 2px;
+  background: #f23029;
+}
+
+.zesto-menu-intro h2 {
+  margin: 0;
+  color: #fff0dd;
+  font-family: "Oswald", sans-serif;
+  font-size: clamp(54px, 5.8vw, 95px);
+  font-weight: 700;
+  letter-spacing: -2px;
+  line-height: 1.12;
+}
+
+.zesto-menu-intro h2 em {
+  color: #f2322b;
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+.zesto-menu-intro > p {
+  max-width: 435px;
+  margin: 0 0 7px;
+  color: #d1b4a6;
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+/* ==========================================
+   CATEGORIES
+========================================== */
+
+.zesto-menu-categories {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 28px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.zesto-menu-category {
+  position: relative;
+  min-height: 52px;
+  padding: 0 0 15px;
+  border: none;
+  background: transparent;
+  color: #af8e7f;
+  font-size: 13px;
+  font-weight: 800;
+  transition: color 0.2s ease;
+}
+
+.zesto-menu-category:hover,
+.zesto-menu-category.is-active {
+  color: #fff0dc;
+}
+
+.zesto-menu-category.is-active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 3px;
+  background: #f23029;
+}
+
+/* ==========================================
+   TWO-COLUMN MENU LAYOUT
+========================================== */
+
+.zesto-menu-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 56%) minmax(0, 44%);
+  align-items: start;
+}
+
+.zesto-menu-list {
+  min-width: 0;
+  padding-right: 32px;
+}
+
+.zesto-menu-list-heading,
+.zesto-menu-selected-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 12px;
+  color: #b58f7c;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+/* ==========================================
+   PIZZA MENU ROWS
+========================================== */
+
+.zesto-menu-item {
+  position: relative;
+  display: grid;
+  grid-template-columns:
+    28px 80px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  min-height: 130px;
+  padding: 15px 12px 15px 6px;
+  border: none;
+  border-bottom: 1px solid rgba(255, 155, 105, 0.14);
+  background: transparent;
+  color: inherit;
+  text-align: left;
+  transition:
+    background 0.25s ease,
+    padding-left 0.25s ease;
+}
+
+.zesto-menu-item:hover,
+.zesto-menu-item.is-selected {
+  padding-left: 12px;
+  background: linear-gradient(
+    90deg,
+    rgba(214, 44, 25, 0.13),
+    transparent 85%
+  );
+}
+
+.zesto-menu-item.is-selected::before {
+  content: "";
+  position: absolute;
+  top: 20%;
+  bottom: 20%;
+  left: 0;
+  width: 3px;
+  border-radius: 3px;
+  background: #f1322b;
+}
+
+.zesto-menu-item-number {
+  align-self: center;
+  color: #987568;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.zesto-menu-item.is-selected .zesto-menu-item-number {
+  color: #ff5948;
+}
+
+/* ==========================================
+   SMALL PREMIUM PIZZA PHOTOS
+========================================== */
+
+.zesto-menu-item-image {
+  display: block;
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 14px;
+  background: #280b08;
+  border: 1px solid rgba(255, 119, 70, 0.18);
+  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.2);
+}
+
+.zesto-menu-item-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.zesto-menu-item:hover .zesto-menu-item-image img,
+.zesto-menu-item.is-selected .zesto-menu-item-image img {
+  transform: scale(1.10);
+}
+
+/* ==========================================
+   NAME AND INGREDIENTS
+========================================== */
+
+.zesto-menu-item-main {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  min-width: 0;
+}
+
+.zesto-menu-item-category {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #f36c50;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.zesto-menu-item-main strong {
+  color: #fff0df;
+  font-family: "Oswald", sans-serif;
+  font-size: clamp(23px, 1.9vw, 31px);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.zesto-menu-item-main small {
+  color: #aa8e81;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+/* ==========================================
+   MENU ROW PRICE
+========================================== */
+
+.zesto-menu-item-end {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 13px;
+}
+
+.zesto-menu-item-end strong {
+  color: #ffdda5;
+  font-size: 13px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.zesto-menu-item-end svg {
+  color: #b48b79;
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease;
+}
+
+.zesto-menu-item:hover .zesto-menu-item-end svg,
+.zesto-menu-item.is-selected .zesto-menu-item-end svg {
+  color: #f33d31;
+  transform: translate(3px, -3px);
+}
+
+.zesto-menu-list-note {
+  margin: 28px 0 0;
+  color: #947365;
+  font-size: 12px;
+  font-style: italic;
+  line-height: 1.7;
+}
+
+/* ==========================================
+   SELECTED PIZZA PANEL
+========================================== */
+
+.zesto-menu-selected {
+  position: relative;
+  isolation: isolate;
+  min-width: 0;
+  padding: 0 0 20px 40px;
+  border-left: 1px solid rgba(255, 118, 73, 0.23);
+}
+
+.zesto-menu-selected::before {
+  content: "";
+  position: absolute;
+  inset: 0 -50px 0 0;
+  z-index: -1;
+  background: radial-gradient(
+    ellipse at 55% 45%,
+    rgba(115, 26, 16, 0.16),
+    transparent 74%
+  );
+  pointer-events: none;
+}
+
+.zesto-menu-selected-top {
+  margin-bottom: 22px;
+}
+
+.zesto-menu-watermark {
+  position: absolute;
+  top: 55px;
+  right: -12px;
+  z-index: -1;
+  color: rgba(244, 53, 35, 0.045);
+  font-family: "Oswald", sans-serif;
+  font-size: clamp(150px, 21vw, 310px);
+  font-weight: 700;
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* ==========================================
+   UPDATED CINEMATIC PIZZA PHOTO
+   FULL RECTANGULAR BACKGROUND
+========================================== */
+
+.zesto-menu-selected-visual {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 315px;
+  margin: 0 0 30px;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #190706;
+  border: 1px solid rgba(248, 110, 60, 0.14);
+}
+
+/* SAME PIZZA IMAGE FILLS THE EMPTY SIDES */
+
+.zesto-menu-selected-bg {
+  position: absolute;
+  inset: -20px;
+  z-index: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transform: scale(1.08);
+  filter:
+    blur(14px)
+    brightness(0.57)
+    saturate(1.1);
+  pointer-events: none;
+}
+
+/* CINEMATIC DARK OVERLAY */
+
+.zesto-menu-selected-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    90deg,
+    rgba(19, 5, 4, 0.30) 0%,
+    rgba(19, 5, 4, 0.03) 48%,
+    rgba(19, 5, 4, 0.30) 100%
+  );
+  pointer-events: none;
+}
+
+/* SOFT WARM GLOW */
+
+.zesto-menu-image-glow {
+  position: absolute;
+  inset: 15%;
+  z-index: 2;
+  border-radius: 50%;
+  background: rgba(224, 65, 25, 0.10);
+  filter: blur(45px);
+  pointer-events: none;
+}
+
+/* SHARP PIZZA IMAGE WITH SOFT SIDE EDGES */
+
+.zesto-menu-selected-image {
+  position: relative;
+  z-index: 3;
+  display: block;
+  width: auto;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  object-position: center;
+
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    #000 9%,
+    #000 91%,
+    transparent 100%
+  );
+
+  mask-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    #000 9%,
+    #000 91%,
+    transparent 100%
+  );
+
+  filter:
+    saturate(1.08)
+    contrast(1.04);
+
+  animation: zesto-pizza-reveal 0.35s ease both;
+}
+
+@keyframes zesto-pizza-reveal {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* IMAGE CAPTION */
+
+.zesto-menu-image-caption {
+  position: absolute;
+  left: 16px;
+  bottom: 14px;
+  z-index: 4;
+  padding: 7px 11px;
+  background: rgba(22, 6, 4, 0.80);
+  border: 1px solid rgba(255, 167, 111, 0.2);
+  border-radius: 999px;
+  color: #f6c9a5;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+  pointer-events: none;
+}
+
+/* ==========================================
+   PIZZA DETAILS
+========================================== */
+
+.zesto-menu-pizza-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+  color: #ffc36e;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.zesto-menu-selected h3 {
+  max-width: 540px;
+  margin: 0;
+  color: #fff1db;
+  font-family: "Oswald", sans-serif;
+  font-size: clamp(42px, 3.6vw, 65px);
+  font-weight: 700;
+  line-height: 1.12;
+}
+
+.zesto-menu-selected-description {
+  max-width: 520px;
+  margin: 18px 0 24px;
+  color: #d4b9a9;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.zesto-menu-ingredient-title,
+.zesto-menu-field-label {
+  display: block;
+  color: #e1bba3;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.zesto-menu-ingredient-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 13px;
+}
+
+.zesto-menu-ingredient-tags span {
+  padding: 9px 12px;
+  background: rgba(41, 13, 9, 0.58);
+  border: 1px solid rgba(255, 126, 77, 0.18);
+  border-radius: 999px;
+  color: #e2c2ae;
+  font-size: 11px;
+}
+
+/* ==========================================
+   SIZE SELECTION
+========================================== */
+
+.zesto-menu-customize {
+  margin-top: 28px;
+  padding-top: 23px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.zesto-menu-size-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.zesto-menu-size {
+  min-height: 42px;
+  padding: 0 16px;
+  background: rgba(35, 11, 8, 0.7);
+  border: 1px solid rgba(255, 125, 74, 0.23);
+  border-radius: 9px;
+  color: #e2c3b1;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.zesto-menu-size:hover {
+  border-color: #eb6b50;
+}
+
+.zesto-menu-size.is-active {
+  background: #c6221b;
+  border-color: #ef4034;
+  color: white;
+}
+
+/* ==========================================
+   PRICE + QUANTITY
+========================================== */
+
+.zesto-menu-order-details {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 14px;
+  margin: 28px 0 24px;
+}
+
+.zesto-menu-price {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.zesto-menu-price small {
+  color: #b99685;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.zesto-menu-price strong {
+  color: #ffe0a8;
+  font-size: 29px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.zesto-menu-quantity {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 5px;
+  background: rgba(30, 9, 7, 0.7);
+  border: 1px solid rgba(255, 126, 75, 0.23);
+  border-radius: 999px;
+}
+
+.zesto-menu-quantity button {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  background: #672019;
+  border: none;
+  border-radius: 50%;
+  color: white;
+}
+
+.zesto-menu-quantity button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.zesto-menu-quantity > span {
+  min-width: 18px;
+  color: #fff0de;
+  font-size: 14px;
+  font-weight: 800;
+  text-align: center;
+}
+
+/* ==========================================
+   ADD TO ORDER
+========================================== */
+
+.zesto-menu-order-button {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  min-height: 60px;
+  padding: 0 20px;
+  background: linear-gradient(
+    110deg,
+    #b81913,
+    #ec2d26
+  );
+  border: 1px solid #ff4e3f;
+  border-radius: 11px;
+  color: white;
+  font-size: 13px;
+  font-weight: 800;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.zesto-menu-order-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px rgba(228, 42, 28, 0.2);
+}
+
+.zesto-menu-order-button > span {
+  margin-left: auto;
+  color: #ffe7c4;
+  white-space: nowrap;
+}
+
+.zesto-menu-selected-footer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 22px;
+  color: #a8897a;
+  font-size: 12px;
+}
+
+.zesto-menu-sparkle {
+  color: #ffc16b;
+  font-size: 17px;
+}
+
+.zesto-menu-disclaimer {
+  margin: 45px 0 0;
+  color: #93766a;
+  font-size: 11px;
+  text-align: center;
+}
+
+/* ==========================================
+   CART TOAST
+========================================== */
+
+.zesto-cart-toast {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 300;
+  max-width: min(390px, calc(100vw - 40px));
+  padding: 16px 21px;
+  background: #2c100b;
+  border: 1px solid rgba(255, 113, 58, 0.35);
+  border-radius: 14px;
+  color: #fff0dd;
+  font-size: 13px;
+  font-weight: 700;
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.4);
+}
+
+/* ==========================================
+   CART DRAWER
+========================================== */
+
+.zesto-cart-scrim {
+  position: fixed;
+  inset: 0;
+  z-index: 250;
+  display: flex;
+  justify-content: flex-end;
+  background: rgba(0, 0, 0, 0.68);
+  backdrop-filter: blur(5px);
+}
+
+.zesto-cart-panel {
+  display: flex;
+  flex-direction: column;
+  width: min(430px, 100%);
+  height: 100%;
+  padding: 26px;
+  overflow-y: auto;
+  background: #1b0806;
+  border-left: 1px solid rgba(255, 113, 58, 0.22);
+  box-shadow: -20px 0 60px rgba(0, 0, 0, 0.35);
+}
+
+.zesto-cart-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.zesto-cart-panel-header h2 {
+  margin: 0;
+  color: #fff0dd;
+  font-family: "Oswald", sans-serif;
+  font-size: 34px;
+}
+
+.zesto-cart-close {
+  display: grid;
+  place-items: center;
+  width: 39px;
+  height: 39px;
+  background: #35130e;
+  border: 1px solid rgba(255, 119, 68, 0.27);
+  border-radius: 50%;
+  color: white;
+}
+
+.zesto-cart-empty {
+  margin: auto 0;
+  color: #c8a99b;
+  text-align: center;
+  line-height: 1.8;
+}
+
+.zesto-cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 22px 0;
+}
+
+.zesto-cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.zesto-cart-item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.zesto-cart-item-info strong {
+  color: #fff0dd;
+  font-size: 14px;
+}
+
+.zesto-cart-item-info small {
+  color: #b99d90;
+  font-size: 11px;
+}
+
+.zesto-cart-item-info span {
+  color: #ffd49a;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.zesto-cart-remove {
+  flex-shrink: 0;
+  padding: 8px 11px;
+  background: transparent;
+  border: 1px solid rgba(255, 80, 55, 0.3);
+  border-radius: 999px;
+  color: #ff8172;
+  font-size: 11px;
+}
+
+.zesto-cart-footer {
+  margin-top: auto;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.zesto-cart-total {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 20px;
+  color: #e5c8b7;
+  font-size: 16px;
+}
+
+.zesto-cart-total strong {
+  color: #ffe2a1;
+  font-size: 20px;
+}
+
+.zesto-cart-continue {
+  width: 100%;
+  min-height: 48px;
+  background: #e52c23;
+  border: 1px solid #f74737;
+  border-radius: 999px;
+  color: white;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.zesto-cart-note {
+  margin: 15px 0 0;
+  color: #a88a7c;
+  font-size: 11px;
+  text-align: center;
+}
+
+/* ==========================================
+   RESPONSIVE - LAPTOP
+========================================== */
+
+@media (max-width: 1200px) {
+  .zesto-menu-container {
+    padding-inline: 4%;
+  }
+
+  .zesto-menu-layout {
+    grid-template-columns: minmax(0, 55%) minmax(0, 45%);
+  }
+
+  .zesto-menu-list {
+    padding-right: 20px;
+  }
+
+  .zesto-menu-selected {
+    padding-left: 25px;
+  }
+
+  .zesto-menu-item {
+    grid-template-columns:
+      25px 68px minmax(0, 1fr) auto;
+    gap: 10px;
+  }
+
+  .zesto-menu-item-image {
+    width: 68px;
+    height: 68px;
+  }
+}
+
+/* ==========================================
+   RESPONSIVE - TABLET
+========================================== */
+
+@media (max-width: 900px) {
+  .zesto-menu-intro {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .zesto-menu-layout {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .zesto-menu-list {
+    padding-right: 0;
+  }
+
+  .zesto-menu-selected {
+    padding-left: 24px;
+  }
+
+  .zesto-menu-selected-visual {
+    height: 370px;
+  }
+}
+
+/* ==========================================
+   RESPONSIVE - MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+  .zesto-menu-container {
+    padding: 75px 5% 65px;
+  }
+
+  .zesto-menu-intro h2 {
+    font-size: clamp(44px, 10vw, 65px);
+  }
+
+  .zesto-menu-intro > p {
+    font-size: 14px;
+  }
+
+  .zesto-menu-kicker {
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+
+  .zesto-menu-categories {
+    gap: 18px;
+  }
+
+  .zesto-menu-category {
+    font-size: 11px;
+  }
+
+  .zesto-menu-item {
+    grid-template-columns:
+      22px 63px minmax(0, 1fr);
+    gap: 10px;
+    min-height: 117px;
+    padding: 12px 5px;
+  }
+
+  .zesto-menu-item-image {
+    width: 63px;
+    height: 63px;
+    border-radius: 11px;
+  }
+
+  .zesto-menu-item-main strong {
+    font-size: 22px;
+  }
+
+  .zesto-menu-item-category {
+    font-size: 9px;
+  }
+
+  .zesto-menu-item-main small {
+    font-size: 10px;
+  }
+
+  .zesto-menu-item-end {
+    grid-column: 3;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .zesto-menu-item-end strong {
+    font-size: 12px;
+  }
+
+  .zesto-menu-selected {
+    padding-left: 17px;
+  }
+
+  .zesto-menu-selected-visual {
+    height: 280px;
+  }
+
+  .zesto-menu-selected h3 {
+    font-size: 45px;
+  }
+
+  .zesto-menu-selected-description {
+    font-size: 14px;
+  }
+
+  .zesto-menu-price strong {
+    font-size: 25px;
+  }
+
+  .zesto-menu-order-button {
+    gap: 8px;
+    padding-inline: 12px;
+    font-size: 12px;
+  }
+
+  .zesto-menu-order-button > span {
+    font-size: 11px;
+  }
+
+  .zesto-cart-panel {
+    padding: 20px;
+  }
+}
+
+/* ==========================================
+   RESPONSIVE - SMALL MOBILE
+========================================== */
+
+@media (max-width: 380px) {
+  .zesto-menu-item {
+    grid-template-columns:
+      19px 55px minmax(0, 1fr);
+    gap: 8px;
+  }
+
+  .zesto-menu-item-image {
+    width: 55px;
+    height: 55px;
+  }
+
+  .zesto-menu-item-main strong {
+    font-size: 19px;
+  }
+
+  .zesto-menu-item-main small {
+    font-size: 9px;
+  }
+
+  .zesto-menu-selected-visual {
+    height: 245px;
+  }
+}
+
+/* ==========================================
+   REDUCED MOTION
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .zesto-menu-item,
+  .zesto-menu-item-image img,
+  .zesto-menu-order-button {
+    transition: none;
+  }
+
+  .zesto-menu-selected-image {
+    animation: none;
+  }
+}

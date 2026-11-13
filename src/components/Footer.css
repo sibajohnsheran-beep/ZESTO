@@ -1,0 +1,398 @@
+
+/* ==========================================
+   ZESTO - PREMIUM FOOTER
+   Dark Cinematic Restaurant Theme
+========================================== */
+
+.zesto-footer {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  scroll-margin-top: 70px;
+
+  background:
+    radial-gradient(
+      ellipse 60% 85% at 10% 15%,
+      rgba(125, 29, 17, 0.18),
+      transparent 75%
+    ),
+    linear-gradient(
+      180deg,
+      #190705 0%,
+      #0e0303 100%
+    );
+
+  border-top: 1px solid rgba(255, 120, 71, 0.2);
+}
+
+.zesto-footer *,
+.zesto-footer *::before,
+.zesto-footer *::after {
+  box-sizing: border-box;
+}
+
+.zesto-footer-container {
+  width: min(1500px, 100%);
+  margin: 0 auto;
+  padding: 75px 6% 25px;
+}
+
+/* ==========================================
+   MAIN FOOTER
+========================================== */
+
+.zesto-footer-main {
+  display: grid;
+  grid-template-columns: 1.3fr 0.8fr 1fr;
+  gap: 75px;
+  align-items: start;
+  padding-bottom: 65px;
+}
+
+/* ==========================================
+   BRAND
+========================================== */
+
+.zesto-footer-brand {
+  max-width: 405px;
+}
+
+.zesto-footer-logo {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.zesto-footer-logo img {
+  display: block;
+  width: auto;
+  max-width: 210px;
+  max-height: 95px;
+  object-fit: contain;
+}
+
+.zesto-footer-brand > p {
+  max-width: 360px;
+  margin: 25px 0;
+  color: #c7a899;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.zesto-footer-brand-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  color: #e5b993;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.zesto-footer-dot {
+  width: 8px;
+  height: 8px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #f43f31;
+  box-shadow: 0 0 14px rgba(244, 63, 49, 0.65);
+}
+
+/* ==========================================
+   FOOTER TITLES
+========================================== */
+
+.zesto-footer-links h3,
+.zesto-footer-contact h3 {
+  position: relative;
+  margin: 0 0 30px;
+  padding-bottom: 17px;
+
+  color: #fff0df;
+  font-family: "Oswald", sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.zesto-footer-links h3::after,
+.zesto-footer-contact h3::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 38px;
+  height: 2px;
+  background: #f13229;
+}
+
+/* ==========================================
+   QUICK LINKS
+========================================== */
+
+.zesto-footer-links nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 17px;
+}
+
+.zesto-footer-links nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  color: #c8a99b;
+  font-size: 13px;
+  text-decoration: none;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.zesto-footer-links nav a svg {
+  color: #ed684e;
+  transition: transform 0.25s ease;
+}
+
+.zesto-footer-links nav a:hover {
+  color: #fff0dc;
+  transform: translateX(5px);
+}
+
+.zesto-footer-links nav a:hover svg {
+  transform: translateX(3px);
+}
+
+/* ==========================================
+   CONTACT
+========================================== */
+
+.zesto-footer-contact > p {
+  max-width: 320px;
+  margin: 0 0 25px;
+
+  color: #c7a899;
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+.zesto-footer-phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+
+  max-width: 100%;
+  padding: 15px 20px;
+
+  background: rgba(100, 27, 18, 0.25);
+  border: 1px solid rgba(255, 117, 72, 0.25);
+  border-radius: 15px;
+
+  text-decoration: none;
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.zesto-footer-phone:hover {
+  transform: translateY(-3px);
+  background: rgba(135, 33, 21, 0.38);
+  border-color: rgba(255, 117, 72, 0.6);
+}
+
+.zesto-footer-phone-icon {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+
+  width: 45px;
+  height: 45px;
+
+  border-radius: 50%;
+  background: #b8261c;
+  color: #fff5e9;
+}
+
+.zesto-footer-phone-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  min-width: 0;
+}
+
+.zesto-footer-phone-copy small {
+  color: #e4aa89;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.zesto-footer-phone-copy strong {
+  color: #fff0dc;
+  font-size: 18px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+/* ==========================================
+   BOTTOM FOOTER
+========================================== */
+
+.zesto-footer-divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 133, 87, 0.32),
+    transparent
+  );
+}
+
+.zesto-footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 18px;
+  padding-top: 23px;
+}
+
+.zesto-footer-copyright {
+  color: #ad8d7e;
+  font-size: 12px;
+}
+
+.zesto-footer-developer {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+
+  color: #c6a797;
+  font-size: 12px;
+}
+
+.zesto-footer-heart {
+  color: #f14235;
+}
+
+.zesto-footer-developer strong {
+  margin-left: 3px;
+  color: #ffbd86;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+}
+
+.zesto-footer-backtop {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+
+  color: white;
+  background: rgba(174, 38, 25, 0.7);
+  border: 1px solid rgba(255, 119, 68, 0.4);
+  border-radius: 50%;
+
+  text-decoration: none;
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.zesto-footer-backtop:hover {
+  background: #e6382b;
+  transform: translateY(-4px);
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 1000px) {
+  .zesto-footer-container {
+    padding-inline: 5%;
+  }
+
+  .zesto-footer-main {
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 45px;
+  }
+
+  .zesto-footer-contact {
+    grid-column: 1 / -1;
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 650px) {
+  .zesto-footer-container {
+    padding: 60px 6% 25px;
+  }
+
+  .zesto-footer-main {
+    grid-template-columns: 1fr;
+    gap: 42px;
+    padding-bottom: 45px;
+  }
+
+  .zesto-footer-contact {
+    grid-column: auto;
+  }
+
+  .zesto-footer-logo img {
+    max-width: 180px;
+    max-height: 80px;
+  }
+
+  .zesto-footer-brand > p,
+  .zesto-footer-contact > p {
+    font-size: 13px;
+  }
+
+  .zesto-footer-links h3,
+  .zesto-footer-contact h3 {
+    margin-bottom: 22px;
+  }
+
+  .zesto-footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    text-align: center;
+  }
+
+  .zesto-footer-backtop {
+    margin-top: 8px;
+  }
+}
+
+@media (max-width: 380px) {
+  .zesto-footer-phone {
+    padding: 12px;
+    gap: 10px;
+  }
+
+  .zesto-footer-phone-copy strong {
+    font-size: 15px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .zesto-footer-links nav a,
+  .zesto-footer-phone,
+  .zesto-footer-backtop {
+    transition: none;
+  }
+}

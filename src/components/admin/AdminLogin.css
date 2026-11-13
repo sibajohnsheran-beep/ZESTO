@@ -1,0 +1,609 @@
+
+/* ==========================================
+   ZESTO ADMIN LOGIN
+   PREMIUM CINEMATIC DESIGN
+========================================== */
+
+.za-login-page {
+  position: relative;
+  isolation: isolate;
+  min-height: 100vh;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+  color: #fff1df;
+
+  background:
+    radial-gradient(
+      ellipse at 18% 52%,
+      rgba(134, 29, 18, 0.36),
+      transparent 50%
+    ),
+    linear-gradient(
+      115deg,
+      #270907 0%,
+      #150504 48%,
+      #0c0303 100%
+    );
+
+  font-family: "Inter", Arial, sans-serif;
+}
+
+.za-login-page *,
+.za-login-page *::before,
+.za-login-page *::after {
+  box-sizing: border-box;
+}
+
+.za-login-glow {
+  position: absolute;
+  top: 20%;
+  right: 5%;
+  z-index: -1;
+
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+
+  background: rgba(190, 40, 21, 0.09);
+  filter: blur(100px);
+  pointer-events: none;
+}
+
+/* ==========================================
+   TOPBAR
+========================================== */
+
+.za-login-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  width: 100%;
+  padding: 22px 5%;
+
+  border-bottom: 1px solid rgba(255, 128, 76, 0.15);
+}
+
+.za-login-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.za-login-brand img {
+  display: block;
+  width: 62px;
+  height: 62px;
+  object-fit: contain;
+}
+
+.za-login-brand > span {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  color: #fff0de;
+  font-family: "Oswald", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  line-height: 1;
+}
+
+.za-login-brand small {
+  color: #f39064;
+  font-family: Arial, sans-serif;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 2.4px;
+}
+
+.za-login-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  color: #e5bfa9;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+
+  transition: color 0.2s ease;
+}
+
+.za-login-back:hover {
+  color: #ffffff;
+}
+
+/* ==========================================
+   TWO-COLUMN LAYOUT
+========================================== */
+
+.za-login-layout {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1.1fr)
+    minmax(0, 0.9fr);
+
+  align-items: center;
+  gap: clamp(35px, 6vw, 110px);
+
+  width: min(1380px, 100%);
+  margin: auto;
+  padding: 55px 6%;
+}
+
+/* ==========================================
+   LEFT SHOWCASE
+========================================== */
+
+.za-login-showcase {
+  min-width: 0;
+}
+
+.za-login-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+
+  margin-bottom: 24px;
+  color: #f6b98c;
+
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2.4px;
+}
+
+.za-login-eyebrow svg {
+  color: #fa5a36;
+}
+
+.za-login-showcase h1 {
+  margin: 0;
+
+  color: #fff0df;
+  font-family: "Oswald", sans-serif;
+  font-size: clamp(53px, 5.4vw, 88px);
+  font-weight: 700;
+  line-height: 1.09;
+  letter-spacing: -1.5px;
+}
+
+.za-login-showcase h1 em {
+  color: #ee3b2d;
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 900;
+}
+
+.za-login-showcase > p {
+  max-width: 490px;
+  margin: 22px 0 0;
+
+  color: #d4ad9e;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.za-login-image-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: min(440px, 100%);
+  height: 330px;
+  margin: 18px auto 12px;
+
+  overflow: visible;
+}
+
+.za-login-image-glow {
+  position: absolute;
+  inset: 20%;
+
+  border-radius: 50%;
+  background: rgba(247, 73, 32, 0.22);
+  filter: blur(55px);
+}
+
+.za-login-image-wrap > img {
+  position: relative;
+  width: min(340px, 90%);
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: contain;
+
+  border-radius: 50%;
+  box-shadow: 0 30px 65px rgba(0, 0, 0, 0.35);
+
+  animation: za-pizza-float 5s ease-in-out infinite;
+}
+
+.za-login-image-label {
+  position: absolute;
+  left: 0;
+  bottom: 5px;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 11px 14px;
+  color: #ffd0ae;
+
+  background: rgba(44, 12, 8, 0.86);
+  border: 1px solid rgba(255, 119, 75, 0.3);
+  border-radius: 999px;
+
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+}
+
+.za-login-image-label span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #f14b33;
+}
+
+.za-login-showcase-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+
+  margin-top: 30px;
+  color: #ae7d6a;
+
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+@keyframes za-pizza-float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* ==========================================
+   LOGIN FORM PANEL
+========================================== */
+
+.za-login-form-section {
+  width: 100%;
+  min-width: 0;
+}
+
+.za-login-card {
+  width: 100%;
+  max-width: 490px;
+  margin: 0 auto;
+  padding: clamp(25px, 4vw, 46px);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(67, 20, 13, 0.88),
+      rgba(26, 8, 6, 0.98)
+    );
+
+  border: 1px solid rgba(255, 132, 81, 0.25);
+  border-radius: 24px;
+
+  box-shadow:
+    0 28px 75px rgba(0, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255, 210, 170, 0.05);
+}
+
+.za-login-lock {
+  display: grid;
+  place-items: center;
+
+  width: 64px;
+  height: 64px;
+  margin-bottom: 28px;
+
+  color: #ffac79;
+  background: #612016;
+  border: 1px solid rgba(255, 132, 76, 0.34);
+  border-radius: 18px;
+}
+
+.za-login-card-heading > span {
+  color: #f09b73;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2.1px;
+}
+
+.za-login-card-heading h2 {
+  margin: 12px 0 14px;
+
+  color: #fff0dc;
+  font-family: "Oswald", sans-serif;
+  font-size: clamp(42px, 4vw, 62px);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.za-login-card-heading h2 em {
+  color: #f34531;
+  font-family: "Playfair Display", Georgia, serif;
+}
+
+.za-login-card-heading > p {
+  margin: 0 0 28px;
+  color: #c8a595;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* ==========================================
+   INPUT FIELDS
+========================================== */
+
+.za-login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.za-login-form > label {
+  margin: 0 0 11px;
+
+  color: #eac3a9;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+}
+
+.za-login-input-wrap {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  width: 100%;
+  min-height: 54px;
+  margin-bottom: 24px;
+  padding: 0 16px;
+
+  background: rgba(15, 5, 4, 0.74);
+  border: 1px solid rgba(255, 130, 77, 0.2);
+  border-radius: 12px;
+
+  transition: border-color 0.2s ease;
+}
+
+.za-login-input-wrap:focus-within {
+  border-color: #e76044;
+}
+
+.za-login-input-wrap > svg {
+  flex-shrink: 0;
+  color: #c17e63;
+}
+
+.za-login-input-wrap input {
+  flex: 1;
+  min-width: 0;
+  width: 100%;
+  height: 52px;
+
+  color: #fff0dc;
+  background: transparent;
+  border: none;
+  outline: none;
+
+  font-size: 13px;
+}
+
+.za-login-input-wrap input::placeholder {
+  color: #87685c;
+}
+
+.za-login-password-toggle {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+
+  width: 30px;
+  height: 35px;
+  padding: 0;
+
+  color: #c99a83;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.za-login-password-toggle:hover {
+  color: #fff0dc;
+}
+
+/* ==========================================
+   LOGIN BUTTON
+========================================== */
+
+.za-login-submit {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+
+  width: 100%;
+  min-height: 56px;
+  margin-top: 3px;
+  padding: 0 21px;
+
+  background: linear-gradient(105deg, #b72017, #ef3e2c);
+  border: 1px solid #f56548;
+  border-radius: 12px;
+
+  color: white;
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.za-login-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 13px 32px rgba(226, 50, 30, 0.24);
+}
+
+.za-login-notice {
+  margin: 15px 0 0;
+  padding: 12px;
+
+  color: #ffccab;
+  background: rgba(204, 112, 38, 0.14);
+  border: 1px solid rgba(255, 173, 97, 0.23);
+  border-radius: 9px;
+
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.za-login-security {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+
+  margin-top: 27px;
+  padding-top: 23px;
+
+  color: #b79686;
+  border-top: 1px solid rgba(255, 146, 90, 0.14);
+
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.za-login-security svg {
+  flex-shrink: 0;
+  color: #e3a37f;
+}
+
+/* ==========================================
+   BOTTOM CREDIT
+========================================== */
+
+.za-login-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  flex-wrap: wrap;
+
+  padding: 20px 5%;
+  color: #9a7869;
+
+  border-top: 1px solid rgba(255, 128, 76, 0.13);
+  font-size: 11px;
+}
+
+.za-login-footer strong {
+  color: #f6a77d;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 950px) {
+  .za-login-layout {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    max-width: 650px;
+  }
+
+  .za-login-showcase {
+    text-align: center;
+  }
+
+  .za-login-eyebrow {
+    justify-content: center;
+  }
+
+  .za-login-showcase > p {
+    margin-inline: auto;
+  }
+
+  .za-login-image-wrap {
+    height: 250px;
+  }
+
+  .za-login-image-wrap > img {
+    width: 245px;
+  }
+
+  .za-login-showcase-bottom {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .za-login-topbar {
+    padding: 15px 5%;
+  }
+
+  .za-login-brand img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .za-login-brand > span {
+    font-size: 23px;
+  }
+
+  .za-login-back {
+    font-size: 10px;
+  }
+
+  .za-login-layout {
+    padding: 40px 5%;
+  }
+
+  .za-login-showcase h1 {
+    font-size: clamp(48px, 11vw, 70px);
+  }
+
+  .za-login-showcase > p {
+    font-size: 13px;
+  }
+
+  .za-login-image-wrap {
+    height: 235px;
+  }
+
+  .za-login-card {
+    padding: 27px 22px;
+  }
+
+  .za-login-card-heading h2 {
+    font-size: 46px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .za-login-image-wrap > img {
+    animation: none;
+  }
+
+  .za-login-submit,
+  .za-login-password-toggle {
+    transition: none;
+  }
+}

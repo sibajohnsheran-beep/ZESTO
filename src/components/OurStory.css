@@ -1,0 +1,551 @@
+
+/* ==========================================
+   ZESTO - OUR STORY
+   PREMIUM 3D CHEF SECTION
+========================================== */
+
+.zesto-story {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  overflow: hidden;
+  scroll-margin-top: 90px;
+
+  background:
+    radial-gradient(
+      ellipse 48% 70% at 24% 48%,
+      rgba(173, 28, 17, 0.23),
+      transparent 76%
+    ),
+    linear-gradient(
+      110deg,
+      #1b0705 0%,
+      #180605 50%,
+      #100403 100%
+    );
+
+  border-top: 1px solid rgba(255, 95, 58, 0.13);
+}
+
+.zesto-story *,
+.zesto-story *::before,
+.zesto-story *::after {
+  box-sizing: border-box;
+}
+
+/* ==========================================
+   MAIN SECTION LAYOUT
+========================================== */
+
+.zesto-story-inner {
+  display: grid;
+  grid-template-columns: 47% 53%;
+  align-items: center;
+
+  width: min(1550px, 100%);
+  min-height: 690px;
+  margin: 0 auto;
+  padding: 65px 6%;
+}
+
+/* ==========================================
+   LEFT SIDE - CHEF 3D VISUAL
+========================================== */
+
+.zesto-story-visual {
+  position: relative;
+  min-width: 0;
+  width: 100%;
+  height: 590px;
+  overflow: hidden;
+}
+
+.zesto-story-halo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  aspect-ratio: 1;
+
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(226, 52, 23, 0.28) 0%,
+      rgba(163, 32, 18, 0.16) 43%,
+      transparent 75%
+    );
+
+  filter: blur(26px);
+  pointer-events: none;
+}
+
+.zesto-story-canvas {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+
+  width: 100%;
+  height: 100%;
+}
+
+.zesto-story-canvas canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  cursor: default;
+  touch-action: pan-y;
+}
+
+.zesto-story-visual-tag {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  z-index: 3;
+
+  transform: translateX(-50%);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 36px;
+  padding: 9px 19px;
+
+  border: 1px solid rgba(255, 111, 59, 0.28);
+  border-radius: 999px;
+
+  background: rgba(33, 9, 6, 0.85);
+  backdrop-filter: blur(12px);
+
+  color: #ffdbb9;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-align: center;
+  white-space: nowrap;
+
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
+
+  pointer-events: none;
+}
+
+/* ==========================================
+   RIGHT SIDE - STORY CONTENT
+========================================== */
+
+.zesto-story-content {
+  position: relative;
+  z-index: 3;
+  min-width: 0;
+
+  padding-left: clamp(20px, 4vw, 65px);
+}
+
+.zesto-story-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  margin-bottom: 23px;
+
+  color: #ffe4c4;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 4px;
+}
+
+.zesto-story-eyebrow span {
+  display: block;
+  width: 30px;
+  height: 2px;
+  flex-shrink: 0;
+  background: #f33229;
+}
+
+/* ==========================================
+   HEADING
+========================================== */
+
+.zesto-story-heading {
+  max-width: 700px;
+  margin: 0;
+
+  color: #fff0db;
+  font-family: "Oswald", sans-serif;
+  font-size: clamp(42px, 4.1vw, 75px);
+  font-weight: 700;
+  line-height: 1.16;
+  letter-spacing: -1px;
+}
+
+.zesto-story-heading em {
+  color: #f12c27;
+  font-family: "Playfair Display", Georgia, serif;
+  font-style: italic;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+/* ==========================================
+   STORY DESCRIPTION
+========================================== */
+
+.zesto-story-description {
+  max-width: 600px;
+  margin: 26px 0 0;
+
+  color: #e2c8b9;
+  font-size: clamp(15px, 1.12vw, 18px);
+  font-weight: 500;
+  line-height: 1.8;
+}
+
+/* ==========================================
+   FEATURE GRID
+========================================== */
+
+.zesto-story-features {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0;
+
+  margin: 35px 0;
+}
+
+.zesto-story-feature {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+
+  min-width: 0;
+  padding: 0 15px;
+
+  border-right: 1px solid rgba(235, 46, 33, 0.35);
+}
+
+.zesto-story-feature:first-child {
+  padding-left: 0;
+}
+
+.zesto-story-feature:last-child {
+  padding-right: 0;
+  border-right: none;
+}
+
+.zesto-story-feature-icon {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+
+  width: 46px;
+  height: 46px;
+
+  color: #fc4437;
+  background: rgba(232, 42, 29, 0.11);
+
+  border: 1px solid rgba(255, 82, 48, 0.16);
+  border-radius: 50%;
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.zesto-story-feature:hover .zesto-story-feature-icon {
+  background: rgba(232, 42, 29, 0.2);
+  transform: translateY(-3px);
+}
+
+.zesto-story-feature h3 {
+  margin: 0 0 7px;
+
+  color: #fff3e7;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.45;
+}
+
+.zesto-story-feature p {
+  margin: 0;
+
+  color: #bda095;
+  font-size: 11px;
+  line-height: 1.55;
+}
+
+/* ==========================================
+   CTA BUTTON
+========================================== */
+
+.zesto-story-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+
+  min-height: 56px;
+  margin-top: 7px;
+  padding: 0 28px;
+
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 800;
+  text-decoration: none;
+
+  background:
+    linear-gradient(
+      110deg,
+      #b90e0c,
+      #f02d25
+    );
+
+  border: 1px solid #ff4035;
+  border-radius: 999px;
+
+  box-shadow:
+    0 12px 28px rgba(155, 19, 12, 0.15);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+.zesto-story-button:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 15px 32px rgba(241, 40, 29, 0.28);
+}
+
+.zesto-story-button:focus-visible {
+  outline: 2px solid #ffc579;
+  outline-offset: 4px;
+}
+
+/* ==========================================
+   LAPTOP RESPONSIVE
+========================================== */
+
+@media (max-width: 1200px) {
+  .zesto-story-inner {
+    grid-template-columns: 45% 55%;
+    padding-inline: 4%;
+  }
+
+  .zesto-story-content {
+    padding-left: 30px;
+  }
+
+  .zesto-story-heading {
+    font-size: clamp(41px, 4.5vw, 65px);
+  }
+
+  .zesto-story-feature {
+    padding-inline: 10px;
+  }
+}
+
+/* ==========================================
+   TABLET RESPONSIVE
+========================================== */
+
+@media (max-width: 900px) {
+  .zesto-story-inner {
+    grid-template-columns: 43% 57%;
+    padding: 55px 4%;
+  }
+
+  .zesto-story-visual {
+    height: 480px;
+  }
+
+  .zesto-story-content {
+    padding-left: 18px;
+  }
+
+  .zesto-story-heading {
+    font-size: clamp(36px, 4.8vw, 50px);
+  }
+
+  .zesto-story-description {
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  .zesto-story-features {
+    grid-template-columns: 1fr;
+    gap: 17px;
+    margin: 28px 0;
+  }
+
+  .zesto-story-feature,
+  .zesto-story-feature:first-child {
+    flex-direction: row;
+    align-items: center;
+    gap: 13px;
+
+    padding: 0;
+    border-right: none;
+  }
+
+  .zesto-story-feature-icon {
+    width: 42px;
+    height: 42px;
+  }
+}
+
+/* ==========================================
+   MOBILE RESPONSIVE
+========================================== */
+
+@media (max-width: 768px) {
+  .zesto-story {
+    scroll-margin-top: 75px;
+  }
+
+  .zesto-story-inner {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding: 38px 5% 75px;
+  }
+
+  .zesto-story-visual {
+    height: 430px;
+    width: 100%;
+  }
+
+  .zesto-story-visual-tag {
+    bottom: 2%;
+  }
+
+  .zesto-story-content {
+    padding: 30px 0 0;
+  }
+
+  .zesto-story-eyebrow {
+    font-size: 11px;
+    letter-spacing: 3px;
+  }
+
+  .zesto-story-heading {
+    max-width: 540px;
+    font-size: clamp(42px, 8vw, 62px);
+  }
+
+  .zesto-story-description {
+    max-width: 650px;
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .zesto-story-features {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0;
+    margin: 30px 0;
+  }
+
+  .zesto-story-feature {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+
+    padding: 0 10px;
+    border-right: 1px solid rgba(235, 46, 33, 0.3);
+  }
+
+  .zesto-story-feature:first-child {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 0;
+  }
+
+  .zesto-story-feature:last-child {
+    border-right: none;
+    padding-right: 0;
+  }
+}
+
+/* ==========================================
+   SMALL MOBILE RESPONSIVE
+========================================== */
+
+@media (max-width: 480px) {
+  .zesto-story-inner {
+    padding: 25px 5% 65px;
+  }
+
+  .zesto-story-visual {
+    height: 365px;
+  }
+
+  .zesto-story-halo {
+    width: 90%;
+  }
+
+  .zesto-story-visual-tag {
+    padding: 8px 12px;
+    font-size: 8px;
+    letter-spacing: 1.4px;
+  }
+
+  .zesto-story-content {
+    padding-top: 25px;
+  }
+
+  .zesto-story-heading {
+    font-size: clamp(37px, 10vw, 50px);
+  }
+
+  .zesto-story-description {
+    font-size: 14px;
+  }
+
+  .zesto-story-features {
+    grid-template-columns: 1fr;
+    gap: 21px;
+  }
+
+  .zesto-story-feature,
+  .zesto-story-feature:first-child {
+    flex-direction: row;
+    align-items: center;
+    gap: 14px;
+
+    padding: 0;
+    border-right: none;
+  }
+
+  .zesto-story-feature-icon {
+    width: 45px;
+    height: 45px;
+  }
+
+  .zesto-story-feature h3 {
+    font-size: 13px;
+  }
+
+  .zesto-story-feature p {
+    font-size: 11px;
+  }
+
+  .zesto-story-button {
+    width: 100%;
+  }
+}
+
+/* ==========================================
+   ACCESSIBILITY
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .zesto-story-button,
+  .zesto-story-feature-icon {
+    transition: none;
+  }
+}
